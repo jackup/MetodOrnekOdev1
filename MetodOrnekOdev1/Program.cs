@@ -30,13 +30,9 @@ namespace MetodOrnekOdev1
             int secim = 0;
             int no1 = 0, no2 = 0;
 
-
-
-
             do
             {
-                Console.WriteLine("****Menü****");
-                Console.WriteLine("1 - Toplama\n2 - Çıkarma\n3 - Çarpma\n4 - Bölme");
+                islem.Menü();
                 secim = int.Parse(Console.ReadLine());
                 Console.WriteLine("İşlem yapacağınız 1. sayıyı girin :");
                 no1 = int.Parse(Console.ReadLine());
@@ -60,8 +56,6 @@ namespace MetodOrnekOdev1
                     default:
                         break;
                 }
-
-
                 Console.WriteLine("Devam etmek istiyor musunuz? (e/h)");
                 decision = char.Parse(Console.ReadLine());
             } while (char.ToLower(decision) == 'e');
@@ -70,11 +64,15 @@ namespace MetodOrnekOdev1
 
     class Matematik
     {
+        public void Menü()
+        {
+            Console.WriteLine("****Menü****");
+            Console.WriteLine("1 - Toplama\n2 - Çıkarma\n3 - Çarpma\n4 - Bölme");
+        }
         public void Toplama(int no1, int no2)
         {
             Console.WriteLine(no1 + no2);
         }
-
         public void Cikarma(int no1, int no2)
         {
             Console.WriteLine(no1 - no2);
