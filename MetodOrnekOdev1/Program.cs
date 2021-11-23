@@ -25,13 +25,13 @@ namespace MetodOrnekOdev1
 
 
             Matematik islem = new Matematik();
-            Console.WriteLine("Hoşgeldiniz\n");
             char decision;
             int secim = 0;
             int no1 = 0, no2 = 0;
 
             do
             {
+                Console.Clear();
                 islem.Menü();
                 secim = int.Parse(Console.ReadLine());
                 Console.WriteLine("İşlem yapacağınız 1. sayıyı girin :");
@@ -66,6 +66,7 @@ namespace MetodOrnekOdev1
     {
         public void Menü()
         {
+            Console.WriteLine("Hoşgeldiniz\n");
             Console.WriteLine("****Menü****");
             Console.WriteLine("1 - Toplama\n2 - Çıkarma\n3 - Çarpma\n4 - Bölme");
         }
